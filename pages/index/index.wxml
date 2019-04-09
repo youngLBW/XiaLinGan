@@ -1,0 +1,10 @@
+<!--index.wxml-->
+
+<!-- <view class='bottombar'> -->
+<view class='imgwraper'>
+<image src='/images/shouye.jpg' class='mainimg'></image>
+</view>
+<!-- </view> -->
+<view class='bottombar'>
+<image src='/images/camera2.png' class='icon' bindtap='getLocalImage'></image>
+</view>

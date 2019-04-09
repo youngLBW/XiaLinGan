@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/results/results"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "Biwen识图",
+    "navigationBarTextStyle":"white"
+  }
+}
