@@ -19,7 +19,7 @@ Page({
   // 拍照功能
   getLocalImage: function () {
     var that = this;
-    console.log('选啥呢');
+    console.log('选锤子呢');
     var tempFilePaths;
     wx.chooseImage({
       count: 1,
