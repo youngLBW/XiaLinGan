@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    result: ''
+    result: '',
+    imgPath: ''
   },
 
   /**
@@ -16,7 +17,8 @@ Page({
   onLoad: function (options) {
     console.log(1)
     this.setData({
-      result: JSON.parse(app.globalData.result).predictions
+      result: JSON.parse(app.globalData.result).predictions,
+      imgPath: app.globalData.imgPath
     })
     console.log(2)
   },

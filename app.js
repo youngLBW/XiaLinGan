@@ -35,6 +35,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    result: 'rinima'
+    result: 'rinima',
+    imgPath: ''
   }
 })

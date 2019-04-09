@@ -1,3 +1,8 @@
 <!--pages/results/results.wxml-->
 <!-- <text>pages/results/results.wxml</text> -->
+<image 
+  src='{{imgPath}}' 
+  style="width: 750rpx; height: 750rpx; background-color: #F5F5F5"
+  mode='aspectFit'
+></image>
 <text>{{result}}</text>
