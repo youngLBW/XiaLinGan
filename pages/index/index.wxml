@@ -1,10 +1,25 @@
 <!--index.wxml-->
 
 <!-- <view class='bottombar'> -->
-<view class='imgwraper'>
-<image src='/images/shouye.jpg' class='mainimg'></image>
+<!-- 侧边栏内容 -->
+<view class="page-slidebar">
+    <view class="page-content">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio" wx:for="{{items}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}" />
+            {{item.value}}
+          </label>
+        </radio-group>
+    </view>
 </view>
-<!-- </view> -->
-<view class='bottombar'>
-<image src='/images/camera2.png' class='icon' bindtap='getLocalImage'></image>
+
+<view class="page-top {{open ? ['c-state','cover'] : ''}} " bindtap="{{open ? 'tap_ch' : ''}}">
+    <view class='imgwraper'>
+    <image src='/images/shouye.jpg' class='mainimg'></image>
+    </view>
+    <!-- </view> -->
+    <view class='bottombar'>
+    <image src='/images/xialingan.jpg' class='icon' bindtap='tap_ch'></image>
+    <image src='/images/camera2.png' class='icon' bindtap='getLocalImage'></image>
+    </view>
 </view>
