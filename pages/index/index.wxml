@@ -6,8 +6,10 @@
     <view class="page-content">
         <radio-group class="radio-group" bindchange="radioChange">
           <label class="radio" wx:for="{{items}}">
-            <radio value="{{item.name}}" checked="{{item.checked}}" />
-            {{item.value}}
+            <view>
+              <radio value="{{item.name}}" checked="{{item.checked}}" />
+              {{item.value}}
+            </view>
           </label>
         </radio-group>
     </view>

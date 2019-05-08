@@ -36,6 +36,7 @@ App({
   globalData: {
     userInfo: null,
     result: 'rinima',
-    imgPath: ''
+    imgPath: '',
+    request_url: 'https://fruits.beonel.club:9999'
   }
 })

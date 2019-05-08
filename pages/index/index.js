@@ -6,17 +6,23 @@ Page({
   data: {
     open: false,
     items: [
-      { name: 'USA', value: '美国' },
-      { name: 'CHN', value: '中国', checked: 'true' },
-      { name: 'BRA', value: '巴西' },
-      { name: 'JPN', value: '日本' },
-      { name: 'ENG', value: '英国' },
-      { name: 'TUR', value: '法国' },
+      { name: 'fruits', value: '水果', checked: 'true' },
+      { name: 'imagenet', value: '通用' },
+      { name: 'car', value: '车型' }
     ]
   },
 
   radioChange(e) {
-    console.log('radio发生change事件，携带value值为：', e.detail.value)
+    console.log('radio发生change事件，携带value值为：', e.detail.value);
+    // if (e.detail.value == 'fruits'){
+    //   app.globalData.request_url = 'https://fruits.beonel.club:9999';
+    // } else {
+
+    // }
+    app.globalData.request_url = (e.detail.value == 'fruits') ? 'https://fruits.beonel.club:9999' : 'https://beonel.club:9999';
+    this.setData({
+      open: false
+    });
   },
 
   // 点击左上角小图标事件
@@ -60,7 +66,7 @@ Page({
           title: '识别中',
         })
         wx.uploadFile({
-          url: 'https://fruits.beonel.club:9999',
+          url: app.globalData.request_url,
           filePath: app.globalData.imgPath,
           name: 'image',
           success(res) {
